@@ -1,6 +1,8 @@
 {
   "name": "Hackathon (Python)",
-  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "features": {
     "ghcr.io/devcontainers/features/git:1": {}
   },
@@ -27,6 +29,6 @@
       }
     }
   },
-  "postCreateCommand": "pip install --upgrade pip && pip install pandas numpy dash plotly && rm -rf \"${containerWorkspaceFolder}/.git\" && (code --uninstall-extension GitHub.copilot --uninstall-extension GitHub.copilot-chat --uninstall-extension Codeium.codeium --uninstall-extension Continue.continue --uninstall-extension sourcegraph.cody-ai --uninstall-extension supermaven.supermaven 2>/dev/null || true) && sudo chown root:root AGENTS.md CLAUDE.md .cursorignore .copilotignore .vscode/extensions.json .devcontainer/devcontainer.json && sudo chmod 0444 AGENTS.md CLAUDE.md .cursorignore .copilotignore .vscode/extensions.json .devcontainer/devcontainer.json",
+  "onCreateCommand": "rm -rf \"${containerWorkspaceFolder}/.git\" && sudo chown root:root AGENTS.md CLAUDE.md .cursorignore .copilotignore .vscode/extensions.json .devcontainer/devcontainer.json .devcontainer/Dockerfile && sudo chmod 0444 AGENTS.md CLAUDE.md .cursorignore .copilotignore .vscode/extensions.json .devcontainer/devcontainer.json .devcontainer/Dockerfile",
   "remoteUser": "vscode"
 }
