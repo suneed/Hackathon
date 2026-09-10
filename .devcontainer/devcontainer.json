@@ -1,0 +1,32 @@
+{
+  "name": "Hackathon (Python)",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "github.copilot.enable": {
+          "*": false,
+          "plaintext": false,
+          "markdown": false,
+          "python": false
+        },
+        "github.copilot.editor.enableAutoCompletions": false,
+        "github.copilot.chat.enabled": false,
+        "editor.inlineSuggest.enabled": false,
+        "extensions.ignoreRecommendations": true,
+        "chat.agent.enabled": false
+      }
+    }
+  },
+  "postCreateCommand": "pip install --upgrade pip && pip install pandas numpy dash plotly && rm -rf \"${containerWorkspaceFolder}/.git\" && (code --uninstall-extension GitHub.copilot --uninstall-extension GitHub.copilot-chat --uninstall-extension Codeium.codeium --uninstall-extension Continue.continue --uninstall-extension sourcegraph.cody-ai --uninstall-extension supermaven.supermaven 2>/dev/null || true) && sudo chown root:root AGENTS.md CLAUDE.md .cursorignore .copilotignore .vscode/extensions.json .devcontainer/devcontainer.json && sudo chmod 0444 AGENTS.md CLAUDE.md .cursorignore .copilotignore .vscode/extensions.json .devcontainer/devcontainer.json",
+  "remoteUser": "vscode"
+}

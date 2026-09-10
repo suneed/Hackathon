@@ -1,0 +1,8 @@
+# AI tools are strictly prohibited for this hackathon exercise.
+# This file tells Cursor to exclude the entire repository from AI indexing,
+# context, Tab completion, and chat. Do not remove or narrow it.
+#
+# Participants: using Cursor's AI features (or any AI assistant) for this
+# exercise is grounds for disqualification. See AGENTS.md / CLAUDE.md.
+
+*

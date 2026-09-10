@@ -1,0 +1,12 @@
+# AI tools are strictly prohibited for this hackathon exercise.
+# This file asks GitHub Copilot (and Copilot-compatible assistants that honor
+# .copilotignore) to exclude the entire repository from suggestions and chat.
+# Do not remove or narrow it.
+#
+# Note: Copilot's fully enforced exclusions are configured org/repo-side via
+# "Content exclusion" settings; this file is the local, best-effort signal.
+#
+# Participants: using Copilot (or any AI assistant) for this exercise is grounds
+# for disqualification. See AGENTS.md / CLAUDE.md.
+
+*

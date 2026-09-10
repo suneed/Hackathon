@@ -1,0 +1,21 @@
+{
+  // AI tools are strictly prohibited for this hackathon exercise.
+  // These are marked "unwanted" so VS Code / Codespaces will not recommend
+  // or auto-install them, and will flag them if already installed.
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.debugpy"
+  ],
+  "unwantedRecommendations": [
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "Codeium.codeium",
+    "Continue.continue",
+    "sourcegraph.cody-ai",
+    "supermaven.supermaven",
+    "TabNine.tabnine-vscode",
+    "AmazonWebServices.aws-toolkit-vscode",
+    "Blackboxapp.blackbox"
+  ]
+}
