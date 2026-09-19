@@ -7,7 +7,7 @@
         {
             "name": "Python: Main",
             "type": "debugpy",
-            "args": ["2018", "False"],
+            "args": ["2017", "False"],
             "request": "launch",
             "program": "${workspaceFolder}/main.py",
             "console": "integratedTerminal"
@@ -15,7 +15,7 @@
         {
             "name": "Python: UI",
             "type": "debugpy",
-            "args": ["2018", "True"],
+            "args": ["2017", "True"],
             "request": "launch",
             "program": "${workspaceFolder}/gui/dash_gui.py",
             "console": "integratedTerminal"
