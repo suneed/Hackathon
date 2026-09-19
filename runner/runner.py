@@ -34,8 +34,11 @@ class Runner:
 
     def run_year(self):
         while CalendarService.get_current_time().year == self.year:
-            while CalendarService.get_current_day_string() not in self.working_days:
+            while (CalendarService.get_current_time().year == self.year
+                   and CalendarService.get_current_day_string() not in self.working_days):
                 CalendarService.to_next_day()
+            if CalendarService.get_current_time().year != self.year:
+                break
             self.run_day()
 
     def run_day(self):
